@@ -273,7 +273,7 @@ class MainActivity : Activity(), SensorEventListener, RadioGroup.OnCheckedChange
              * Fix for 179 degree <--> -179 degree transition problem:
              * Check whether one of the two orientation angles (gyro or accMag) is negative while the other one is positive.
              * If so, add 360 degree (2 * math.PI) to the negative value, perform the sensor fusion, and remove the 360 degree from the result
-             * if it is greater than 180�. This stabilizes the output in positive-to-negative-transition cases.
+             * if it is greater than 180 degree. This stabilizes the output in positive-to-negative-transition cases.
              */
             // azimuth
             if (gyroOrientation[0] < -0.5 * Math.PI && accMagOrientation!![0] > 0.0) {
